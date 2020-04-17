@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <title>Busnify</title>
+</head>
+<body>
+    <section id="header">
+        <div class="container">
+            <img src="images/logo.png" class="logo">
+            <div class="header-text">
+                <h1>Välkommen till Busnify</h1>
+                <span class="square"></span>
+                <p>Målet med den här hemsidan är att beskriva det nya Coronavirusets påverkan gällande mjukvaruutveckling (software engineering).</p>
+                <a href="#dis"><button class="common-btn">Läs Mer</button></a>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav id="sideNav">
+        <ul>
+            <li><a href="#header">Intro</a></li>
+            <li><a href="#dis">Diskussion</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+    <img src="images/menu.png" id="menuBtn">
+
+    <!--diskussionsdel-->
+    
+    <section id="dis">
+        <div class="dis-left-col">
+            <img src="images/dis.png">
+        </div>
+        <div class="dis-right-col">
+            <div class="dis-text">
+                <h1>Hur har mjukvaruutvecklingen påverkats?</h1>
+                <span class="square"></span>
+                <p>Coronavirus utbrottet har orsakat panik över hela världen och har stört många affärsprocesser på vägen.
+                    Detta inkluderar trasiga leveranskedjor, stopp i tillverkningen och minskad efterfrågan på varor.
+                    Eftersom Coronavirus har en så enorm inverkan på företag, skulle jag vilja presentera en översikt över effekten 
+                    den har särskilt mjukvaruutveckling. <br><br>
+                    mjukvaruutvecklingsindustrin är mycket globaliserad och enligt mig så är första problemet att detta orsaker en begränsning av resor.
+                    Många mjukvaruutvecklare inom svenska företag reser regelbundet till tjänsteleverantörens plats för att träffas ansikte mot ansikte.
+                    Tack vare modern teknik är det möjligt att hålla mötet via Skype eller Zoom, men ändå är det inte en ersättning för att faktiskt vara där personligen. <br><br>
+                    Många mjukvaruutecklingsföretag är vanligtvis beredda på alla typer av störingar, så de bör inte ha några problem att flytta runt människor. 
+                    När det gäller utvecklingstakten fortsätter många företag sina normala processer, även med lägre försäljningsprognoser. <br>
+                    De förstår att förr eller senare kommer hela saken att spränga och det är bättre att vara beredda på framtiden efter coronavirus.
+
+                </p><br><br>
+                <div class="line">
+                    <span class="line-1"></span><br>
+                    <span class="line-2"></span><br>
+                    <span class="line-3"></span>
+                </div>
+                <h2>"We are stronger together than <br>we are alone."</h2>
+                <h3>---Walter Payton</h3>
+            </div>
+
+        </div>
+
+    </section>
+    <!--kontakt-->
+    <section id="kontakt">
+        <div class="container kontakt-row">
+            <div class="kontakt-left-col">
+                <div class="wrapper">
+                    <h2>Tag Kontakt</h2>
+                    <div id="error_message"></div>
+            
+                    <form id="myform" onsubmit="return validation()">
+                        <div class="input_field" >
+                            <input type="text" placeholder="Namn" id="name">
+                        </div>
+                        <div class="input_field">
+                            <input type="text" placeholder="Efternamn" id="lastname">
+                        </div>
+                        <div class="input_field">
+                            <input type="text" placeholder="Telefonnummer" id="tel">
+                        </div>
+                        <div class="input_field">
+                            <input type="text" placeholder="Email" id="email">
+                        </div>
+                        <div class="input_field">
+                            <textarea id="message" placeholder="Meddelande"></textarea>
+                        </div>
+                        <div class="btn">
+                            <input type="submit">
+                        </div>
+            
+                    </form>
+                    
+                </div>
+                
+            </div>
+            <div class="kontakt-right-col">
+                <img src="images/kontakt.png">
+            </div>
+            <div class="line">
+                <span class="line-1"></span><br>
+                <span class="line-2"></span><br>
+                <span class="line-3"></span>
+            </div>
+        </div>
+        
+
+    </section>
+    <!--footer-->
+    <section id="footer">
+        <div class="container footer-row">
+            <hr>
+            <div class="footer-left-col"></div>
+            <div class="footer-right-col"></div>
+        </div>
+    </section>
+    <!--social-icons-->
+    <div class="social-icons">
+        <a href="https://sv-se.facebook.com/"><img src="/images/facebook.png"></a>
+        <a href="https://www.instagram.com/?hl=sv"><img src="/images/instagram.png"></a>
+        <a href="https://twitter.com/explore"><img src="/images/twitter.png"></a>
+        <a href="https://se.linkedin.com/"><img src="/images/linkedin.png"></a>
+    </div>
+
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav"); 
+
+        sideNav.style.right = "-250px"; 
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+            }
+            else {
+                sideNav.style.right = "-250px";
+            }
+        }
+        var scroll = new SmoothScroll('a[href*="#"]',{
+            speed: 1000,
+            speedAsDuration: true
+        });
+    </script>
+    
+</body>
+</html>
